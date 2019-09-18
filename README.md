@@ -62,6 +62,7 @@ $checkedResult = $interactor->getResultFor(new ResultFor($textUid, JsonVisible::
 
 var_dump($checkedResult);
 
+{%
 object(Kafkiansky\Textru\ReadModel\CheckedResult)#35 (10) {
   ["dateCheck":"Kafkiansky\Textru\ReadModel\CheckedResult":private]=>
   object(DateTimeImmutable)#33 (3) {
@@ -120,5 +121,6 @@ object(Kafkiansky\Textru\ReadModel\CheckedResult)#35 (10) {
   NULL
 }
 
+%}
 
 ``` 
