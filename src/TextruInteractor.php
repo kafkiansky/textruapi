@@ -40,7 +40,7 @@ final class TextruInteractor
 
     public function sendForVerification(QueuedText $queuedText): QueuedTextResponse
     {
-        $request = $this->client->request('POST', self::API_URL . 'post', [
+        $content = $this->client->request('POST', self::API_URL . 'post', [
             'form_params' => [
                 'text' => $queuedText->getText()->getValue(),
                 'userkey' => $this->userKey->getValue(),
@@ -50,9 +50,12 @@ final class TextruInteractor
                 'copying' => $queuedText->getCopying() instanceof Copying ? $queuedText->getCopying()->getValue() : '',
                 'callback' => $queuedText->getCallbackUrl() instanceof CallbackUrl ? $queuedText->getCallbackUrl()->getValue() : ''
             ]
-        ]);
+        ])
+            ->getBody()
+            ->getContents()
+        ;
 
-        $response = json_decode($request->getBody()->getContents(), true);
+        $response = json_decode($content, true);
 
         return new QueuedTextResponse(
             $response['text_uid'] ?? null,
