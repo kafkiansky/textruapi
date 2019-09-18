@@ -125,7 +125,9 @@ final class TextruInteractor
                 ->setCountCharsWithoutSpace($seoCheck['count_chars_without_space'])
                 ->setWaterPercent($seoCheck['water_percent'])
                 ->setSpamPercent($seoCheck['spam_percent'])
-                ->setCountWords($seoCheck['count_words']);
+                ->setCountWords($seoCheck['count_words'])
+                ->setListKeys(json_decode($seoCheck['list_keys'], true))
+                ->setListKeysGroup(json_decode($seoCheck['list_keys_group'], true));
         }
 
         return $checkedResult;
