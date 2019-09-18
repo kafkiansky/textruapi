@@ -2,7 +2,10 @@
     "name": "kafkiansky/textru",
     "description": "Library for text.ru api interaction.",
     "type": "library",
+    "keywords": ["api","text.ru"],
+    "homepage": "https://github.com/kafkiansky/textruapi",
     "require": {
+        "php": ">=7.2",
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
