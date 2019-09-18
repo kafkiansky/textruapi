@@ -16,7 +16,7 @@ composer require kafkiansky/textruapi
 
 Simple create object of class TextruInteractor with two arguments:
 
-```
+```php
 1. Send text for checking, put in `sendForVerification()` method `QueuedText` object with needed arguments, e.g. Text, CallbackUrl, etc.
 
 <?php
