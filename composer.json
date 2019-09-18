@@ -1,0 +1,29 @@
+{
+    "name": "kafkiansky/textru",
+    "description": "Library for text.ru api interaction.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Vadim Zanfir",
+            "email": "vadimzanfir@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Kafkiansky\\Textru\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kafkiansky\\Textru\\Tests\\": "tests/"
+        }
+    }
+}
