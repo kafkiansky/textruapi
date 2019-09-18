@@ -58,7 +58,7 @@ echo $textUid;  // 48934969
 <?php
 
 /** @var \Kafkiansky\Textru\ReadModel\CheckedResult $checkedResult */
-  = $interactor->getResultFor(new ResultFor($textUid, JsonVisible::detail()));
+$checkedResult = $interactor->getResultFor(new ResultFor($textUid, JsonVisible::detail()));
 
 var_dump($checkedResult->getDateCheck()); // DateTimeImmutable object
 
